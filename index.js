@@ -10,16 +10,13 @@ function glslifyWebpackLoader(source) {
   this.callback = this.async()
   this.cacheable(true)
 
-  glslify.bundle(source, {
-    inline: true,
-    basedir: basedir
-  }, function(err, src, files) {
-    if (files) {
-      files.forEach(function(file) {
-        self.addDependency(file)
-      })
-    }
-
-    return self.callback(err, src)
-  })
+  try {
+    const comp = glslify.compile(source, {
+      inline: true,
+      basedir: basedir
+    });
+    self.callback(null, comp);
+  } catch (e) {
+    self.callback(e, '');
+  }
 }
