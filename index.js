@@ -11,7 +11,7 @@ function glslifyWebpackLoader(source) {
   this.cacheable(true)
 
   try {
-    const comp = glslify(source, {
+    const comp = glslify.compile(source, {
       inline: true,
       basedir: basedir
     });
