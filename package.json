@@ -1,6 +1,6 @@
 {
-  "name": "glslify-loader",
-  "version": "1.0.2",
+  "name": "scarlett-glslify-loader",
+  "version": "1.0.3",
   "description": "glslify loader module for webpack 3.x",
   "main": "index.js",
   "license": "MIT",
@@ -9,9 +9,9 @@
     "bundle": "webpack"
   },
   "author": {
-    "name": "Hugh Kennedy",
-    "email": "hughskennedy@gmail.com",
-    "url": "http://hughsk.io/"
+    "name": "Luís Fernandes aka Apidcloud",
+    "email": "luisapidcloud@hotmail.com",
+    "url": "https://scarlett.cothesia.com/"
   },
   "dependencies": {
     "glslify": "6.1.0"
@@ -28,13 +28,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/stackgl/glslify-loader.git"
+    "url": "git://github.com/apidcloud/glslify-loader.git"
   },
   "keywords": [
     "ecosystem:stackgl"
   ],
-  "homepage": "https://github.com/stackgl/glslify-loader",
+  "homepage": "https://github.com/apidcloud/glslify-loader",
   "bugs": {
-    "url": "https://github.com/stackgl/glslify-loader/issues"
+    "url": "https://github.com/apidcloud/glslify-loader/issues"
   }
 }
