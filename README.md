@@ -2,7 +2,7 @@
 
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 
-[glslify](http://github.com/stackgl/glslify) loader module for [webpack](http://webpack.github.io/).
+[glslify](http://github.com/stackgl/glslify) loader module for [webpack](https://webpack.js.org).
 
 ## Installation
 
@@ -13,17 +13,22 @@ Generally, you'll want to use this alongside webpack's
 npm install --save glslify-loader raw-loader
 ```
 
+Alternatively, using `yarn`:
+``` bash
+yarn glslify-loader raw-loader
+```
+
 ## Usage
 
 [![NPM](https://nodei.co/npm/glslify-loader.png)](https://nodei.co/npm/glslify-loader/)
 
-[Documentation: Using Loaders](http://webpack.github.io/docs/using-loaders.html)
+[Documentation: Using Loaders](https://webpack.js.org/concepts/loaders/#using-loaders)
 
 Once installed, you should be able to require your shaders
 like so to have them bundled at build time:
 
 ``` javascript
-var source = require('glslify!raw!./my-shader.glsl')
+var source = require('glslify-loader!raw-loader!./my-shader.glsl')
 ```
 
 ### Configuration
@@ -35,9 +40,17 @@ additional configuration:
 ``` javascript
 module.exports = {
   module: {
-    loaders: [
-      { test: /\.(glsl|frag|vert)$/, loader: 'raw', exclude: /node_modules/ },
-      { test: /\.(glsl|frag|vert)$/, loader: 'glslify', exclude: /node_modules/ }
+    rules: [
+      { 
+        test: /\.(glsl|frag|vert)$/, 
+        loader: 'raw-loader', 
+        exclude: /node_modules/ 
+      },
+      { 
+        test: /\.(glsl|frag|vert)$/, 
+        loader: './index', 
+        exclude: /node_modules/ 
+      }
     ]
   }
 }

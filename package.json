@@ -1,7 +1,7 @@
 {
   "name": "glslify-loader",
   "version": "1.0.2",
-  "description": "glslify loader module for webpack",
+  "description": "glslify loader module for webpack 3.x",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -16,10 +16,19 @@
   "dependencies": {
     "glslify": "6.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "glsl-aastep": "1.0.1",
+    "glsl-noise": "0.0.0",
+    "glsl-raytrace": "1.0.0",
+    "glsl-sdf-normal": "1.0.0",
+    "glsl-turntable-camera": "1.0.0",
+    "raw-loader": "0.5.1",
+    "webpack": "3.11.0",
+    "webpack-dev-server": "2.11.1"
+  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/maximus8891/glslify-loader.git"
+    "url": "git://github.com/stackgl/glslify-loader.git"
   },
   "keywords": [
     "ecosystem:stackgl"
